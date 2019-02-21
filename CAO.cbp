@@ -38,7 +38,7 @@
 		<Unit filename="include/program.h" />
 		<Unit filename="include/registers.h" />
 		<Unit filename="include/simulator.h" />
-		<Unit filename="main.cpp" />
+		<Unit filename="src/main.cpp" />
 		<Unit filename="src/program.cpp" />
 		<Unit filename="src/registers.cpp" />
 		<Unit filename="src/simulator.cpp" />
