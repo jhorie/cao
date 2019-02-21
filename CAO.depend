@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1550611945 source:/home/jhorie/Code/CAO/CAO/main.cpp
+	<iostream>
+	"Computer.h"
+	"Program.h"
+
+1550611859 /home/jhorie/Code/CAO/CAO/include/Computer.h
+	"Program.h"
+
+1550611828 source:/home/jhorie/Code/CAO/CAO/src/Computer.cpp
+	<iostream>
+	"Computer.h"
+
+1550611880 source:/home/jhorie/Code/CAO/CAO/src/Program.cpp
+	<iostream>
+	"Program.h"
+	"Computer.h"
+
+1550611787 /home/jhorie/Code/CAO/CAO/include/Program.h
+
