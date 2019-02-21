@@ -1,4 +1,5 @@
 #include <iostream>
+#include "math.h"
 #include "Program.h"
 #include "Computer.h"
 
@@ -19,7 +20,7 @@ Program::Program(int totalInstructions, double fracArith, double fracStore, doub
     this->numArith = totalInstructions * fracArith;
     this->numStore = totalInstructions * fracStore;
     this->numLoad = totalInstructions * fracLoad;
-    this->numBranch = totalInstructions * (1 - fracLoad - fracArith - fracStore);
+    this->numBranch = round(totalInstructions * (1 - fracLoad - fracArith - fracStore));
     this->numTotal = totalInstructions;
 }
 
