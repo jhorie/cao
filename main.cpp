@@ -41,22 +41,22 @@ int main()
 
     cout << "This is computer 1 and program 1: " << endl;
     printCompAndProgram(&comp1, &prog1);
-    cout << "This is computer 1 and program 2: " << endl;
-    printCompAndProgram(&comp1, &prog2);
-    cout << "This is computer 1 and program 3: " << endl;
-    printCompAndProgram(&comp1, &prog3);
-
     cout << "This is computer 2 and program 1: " << endl;
     printCompAndProgram(&comp2, &prog1);
-    cout << "This is computer 2 and program 2: " << endl;
-    printCompAndProgram(&comp2, &prog2);
-    cout << "This is computer 2 and program 3: " << endl;
-    printCompAndProgram(&comp2, &prog3);
-
     cout << "This is computer 3 and program 1: " << endl;
     printCompAndProgram(&comp3, &prog1);
+
+    cout << "This is computer 1 and program 2: " << endl;
+    printCompAndProgram(&comp1, &prog2);
+    cout << "This is computer 2 and program 2: " << endl;
+    printCompAndProgram(&comp2, &prog2);
     cout << "This is computer 3 and program 2: " << endl;
     printCompAndProgram(&comp3, &prog2);
+
+    cout << "This is computer 1 and program 3: " << endl;
+    printCompAndProgram(&comp1, &prog3);
+    cout << "This is computer 2 and program 3: " << endl;
+    printCompAndProgram(&comp2, &prog3);
     cout << "This is computer 3 and program 3: " << endl;
     printCompAndProgram(&comp3, &prog3);
 
@@ -64,22 +64,22 @@ int main()
 
     cout << "This is computer 1 and program 1: " << endl;
     printCompAndProgramMIPS(&comp1, &prog1);
-    cout << "This is computer 1 and program 2: " << endl;
-    printCompAndProgramMIPS(&comp1, &prog2);
-    cout << "This is computer 1 and program 3: " << endl;
-    printCompAndProgramMIPS(&comp1, &prog3);
-
     cout << "This is computer 2 and program 1: " << endl;
     printCompAndProgramMIPS(&comp2, &prog1);
-    cout << "This is computer 2 and program 2: " << endl;
-    printCompAndProgramMIPS(&comp2, &prog2);
-    cout << "This is computer 2 and program 3: " << endl;
-    printCompAndProgramMIPS(&comp2, &prog3);
-
     cout << "This is computer 3 and program 1: " << endl;
     printCompAndProgramMIPS(&comp3, &prog1);
+
+    cout << "This is computer 1 and program 2: " << endl;
+    printCompAndProgramMIPS(&comp1, &prog2);
+    cout << "This is computer 2 and program 2: " << endl;
+    printCompAndProgramMIPS(&comp2, &prog2);
     cout << "This is computer 3 and program 2: " << endl;
     printCompAndProgramMIPS(&comp3, &prog2);
+
+    cout << "This is computer 1 and program 3: " << endl;
+    printCompAndProgramMIPS(&comp1, &prog3);
+    cout << "This is computer 2 and program 3: " << endl;
+    printCompAndProgramMIPS(&comp2, &prog3);
     cout << "This is computer 3 and program 3: " << endl;
     printCompAndProgramMIPS(&comp3, &prog3);
 
