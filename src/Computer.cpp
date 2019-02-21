@@ -29,5 +29,10 @@ double Computer::calculateGlobalCPI()
 
 double Computer::calculateExecutionTime(Program *p)
 {
-return 1.1;
+    return 1.1;
+}
+
+double Computer::calculateMIPS()
+{
+    return 1.1;
 }
