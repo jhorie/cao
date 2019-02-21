@@ -4,7 +4,7 @@
 class Registers
 {
 private:
-    int data[];
+    int data[32];
     int pc;
 public:
     Registers();
