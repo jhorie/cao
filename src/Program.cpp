@@ -1,33 +1,60 @@
-#include <iostream>
-#include "Program.h"
-#include "Computer.h"
+#include <vector>
+#include "program.h"
+#include "instruction.h"
 
-
-using namespace std;
-
-Program::Program(int numArith, int numStore, int numLoad, int numBranch)
+Program::Program ()
 {
-    this->numArith = numArith;
-    this->numStore = numStore;
-    this->numLoad = numLoad;
-    this->numBranch = numBranch;
-    this->numTotal = numArith + numStore + numLoad + numBranch;
+	instructions = new std::vector<Instruction*>;
 }
 
-Program::Program(int totalInstructions, double fracArith, double fracStore, double fracLoad)
+
+Program::~Program ()
 {
-    this->numArith = totalInstructions * fracArith;
-    this->numStore = totalInstructions * fracStore;
-    this->numLoad = totalInstructions * fracLoad;
-    this->numBranch = totalInstructions * (1 - fracLoad - fracArith - fracStore);
-    this->numTotal = totalInstructions;
+	std::vector<Instruction*>::iterator it;
+
+	for (it = instructions->begin (); it < instructions->end(); it++)
+	{
+		delete *it;
+	}
+	delete instructions;
 }
 
-void Program::printStats()
+
+void Program::appendInstruction (Instruction *instruction)
 {
-    cout << "Num Arith: " << numArith << endl;
-    cout << "Num Store: " << numStore << endl;
-    cout << "Num Load: " << numLoad << endl;
-    cout << "Num Branch: " << numBranch << endl;
-    cout << "Num Total: " << numTotal << endl;
+	instructions->push_back (instruction);
+}
+
+
+void Program::disassemble ()
+{
+	std::vector<Instruction*>::iterator it;
+
+	for (it = instructions->begin (); it < instructions->end (); it++)
+	{
+		(*it)->disassemble ();
+	}
+}
+
+
+void Program::singleStep (Registers *registers)
+{
+	std::vector<Instruction*>::iterator it = instructions->begin () + registers->getPC ();
+
+	if (it >= instructions->begin () && it < instructions->end ())
+	{
+		registers->setPC ((*it)->execute (registers));
+	}
+}
+
+
+void Program::execute (Registers *registers)
+{
+	std::vector<Instruction*>::iterator it = instructions->begin () + registers->getPC ();
+
+	while (it >= instructions->begin () && it < instructions->end ())
+	{
+		singleStep (registers);
+		it = instructions->begin () + registers->getPC ();
+	}
 }

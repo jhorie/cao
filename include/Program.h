@@ -1,23 +1,21 @@
-#ifndef PROGRAM_H
-#define PROGRAM_H
+#ifndef _PROGRAM_H_
+#define _PROGRAM_H_
 
+#include <vector>
+#include "instruction.h"
+#include "registers.h"
 
 class Program
 {
-    public:
-        Program(int, int, int, int);
-        Program(int, double, double, double);
+		std::vector<Instruction*>	*instructions;
+	public:
+		Program ();
+		~Program ();
 
-        int numArith;
-        int numStore;
-        int numLoad;
-        int numBranch;
-        int numTotal;
-        void printStats();
-
-    protected:
-
-    private:
+		void	appendInstruction (Instruction*);
+		void	disassemble ();
+		void	singleStep (Registers*);
+		void	execute (Registers*);
 };
 
-#endif // PROGRAM_H
+#endif /* _PROGRAM_H_ */
