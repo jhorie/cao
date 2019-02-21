@@ -1,13 +1,21 @@
-#ifndef _INSTRUCTION_H_
-#define _INSTRUCTION_H_
-
-#include <iostream>
+#ifndef INSTRUCTION_H
+#define INSTRUCTION_H
 #include "registers.h"
-
-using namespace std;
 
 class Instruction
 {
+    public:
+        Instruction(int,int,int);
+        ~Instruction();
+        void disassemble();
+        void execute(Registers *);
+
+    protected:
+
+    private:
+        int a;
+        int b;
+        int c;
 };
 
-#endif /* _INSTRUCTION_H_ */
+#endif // INSTRUCTION_H
