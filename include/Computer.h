@@ -17,7 +17,7 @@ class Computer
         double calculateGlobalCPI();
         double calculateExecutionTime(Program *);
         double calculateMIPS();
-        double calculateMIPS(Program);
+        double calculateMIPS(Program *);
 
     protected:
 

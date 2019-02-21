@@ -29,5 +29,16 @@ double Computer::calculateGlobalCPI()
 
 double Computer::calculateExecutionTime(Program *p)
 {
-return 1.1;
+    double cycles = p->numArith * cpiArith + p->numStore * cpiStore + p->numLoad * cpiLoad + p->numBranch * cpiBranch;
+    return cycles / (this->clockRateGhz * 1000000000);
+}
+
+double Computer::calculateMIPS()
+{
+    return 1000 * clockRateGhz / calculateGlobalCPI();
+}
+
+double Computer::calculateMIPS(Program *p)
+{
+    return 1000 * clockRateGhz / ((p->numArith * cpiArith + p->numBranch * cpiBranch + p->numLoad * cpiLoad + p->numStore * cpiStore) / p->numTotal);
 }
