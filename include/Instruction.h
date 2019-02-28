@@ -87,8 +87,7 @@ class BrneInstruction : public Instruction
         BrneInstruction(int a1, int b1, int c1): Instruction(a1,b1,c1){}
 
         int execute(Registers *r) {
-//            if (r->getRegister(a) != r->getRegister(b)) {
-            if (a != b) {
+            if (r->getRegister(a) != r->getRegister(b)) {
                 r->setPC(r->getPC() + 1 + c);
             } else {
                 r->setPC(r->getPC() + 1);
