@@ -1,8 +1,6 @@
 #include "AddInstruction.h"
 
-AddInstruction::AddInstruction()
-{
-
+int AddInstruction::execute(Registers *r) {
+    return 0;
 }
-
 

@@ -16,6 +16,7 @@ void Registers::print()
     {
         cout << "regNum: " << i << ", value: " << data[i] << endl;
     }
+    cout << "PC: " << pc << endl;
 }
 
 void Registers::setRegister(int regNum, int value)

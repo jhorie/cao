@@ -34,7 +34,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/instruction.h" />
+		<Unit filename="include/Instruction.h" />
 		<Unit filename="include/program.h" />
 		<Unit filename="include/registers.h" />
 		<Unit filename="include/simulator.h" />
